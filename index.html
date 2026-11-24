@@ -4,11 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f8e8e7">
-<meta name="description" content="You are cordially invited to celebrate Carlita B. Estabillo's 18th birthday on December 6, 2026.">
-<title>Carlita's 18th Birthday | Celebrant's Program</title>
+<meta name="description" content="You are cordially invited to celebrate Carlita B. Estabillo's Birthday on December 6, 2026.">
+<title>Carlita's Birthday Celebration</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root{--ink:#211719;--rose:#c95b68;--rose2:#df7c84;--paper:#fff8f6;--line:#d8a6a5;--muted:#765e60}
 *{box-sizing:border-box}
@@ -70,7 +72,7 @@ button{font:inherit}
 .map-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .rsvp-form{max-width:620px;margin:auto;display:grid;gap:15px}
 label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#765e60;font-weight:700}
-input,select,textarea{width:100%;padding:13px 14px;border:1px solid rgba(201,91,104,.4);background:rgba(255,255,255,.72);color:var(--ink);font: .9rem Montserrat,sans-serif;border-radius:0;outline:none}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid rgba(201,91,104,.4);background:rgba(255,255,255,.72);color:var(--ink);font:.9rem Montserrat,sans-serif;border-radius:0;outline:none}
 input:focus,select:focus,textarea:focus{border-color:var(--rose);box-shadow:0 0 0 3px rgba(201,91,104,.1)}
 .field{display:grid;gap:7px}
 textarea{min-height:100px;resize:vertical}
@@ -84,22 +86,37 @@ footer .script{font-size:3rem}
 .fade.visible{opacity:1;transform:none}
 .music-note{display:inline-block;animation:note 2s ease-in-out infinite}
 @keyframes note{50%{transform:translateY(-3px) rotate(8deg)}}
+
+/* Pastel dress code */
+.pastel-colors{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:20px;max-width:750px;margin:35px auto;text-align:center}
+.pastel-color{font-size:.78rem;color:#765e60;line-height:1.5}
+.pastel-swatch{width:65px;height:65px;border-radius:50%;margin:0 auto 9px;border:2px solid rgba(180,130,150,.25);box-shadow:0 3px 10px rgba(100,60,70,.08)}
+
 @media(max-width:760px){
  .nav-inner{flex-wrap:wrap;padding:10px 0}.menu-btn{display:block}.nav-links{display:none;order:3;width:100%;padding:12px 0 8px;flex-direction:column;gap:15px}.nav-links.open{display:flex}.music-btn{margin-left:auto}
  .hero{min-height:88vh;padding-top:60px}.hero-card{padding:24px 10px 35px}
  .event-meta{gap:16px}.meta-item{min-width:135px}.countdown{gap:6px}.timebox{min-width:57px}
  .section{padding:55px 0}.program-grid,.names-grid{grid-template-columns:1fr;gap:15px}.section-inner{padding:25px 17px}.map-frame{height:300px}
+ .pastel-colors{grid-template-columns:repeat(3,1fr);gap:16px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
 </style>
 </head>
+
 <body>
+
 <nav class="nav">
  <div class="wrap nav-inner">
   <a class="brand" href="#home">Carlita's Celebration</a>
   <button class="menu-btn" id="menuBtn" aria-label="Open navigation">MENU</button>
   <div class="nav-links" id="navLinks">
-   <a href="#home">Home</a><a href="#program">Program</a><a href="#roses">18 Roses</a><a href="#candles">18 Candles</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a>
+   <a href="#home">Home</a>
+   <a href="#dresscode">Dress Code</a>
+   <a href="#program">Program</a>
+   <a href="#roses">18 Roses</a>
+   <a href="#candles">18 Candles</a>
+   <a href="#venue">Venue</a>
+   <a href="#rsvp">RSVP</a>
   </div>
   <button class="music-btn" id="musicBtn" type="button"><span class="music-note">♫</span> MUSIC: OFF</button>
  </div>
@@ -110,13 +127,13 @@ footer .script{font-size:3rem}
   <div class="bow">୨୧</div>
   <div class="eyebrow">A special invitation</div>
   <h1>CARLITA'S<br>B-DAY</h1>
-  <div class="script">Celebrant's Program</div>
+  <div class="script">A Celebration of Love</div>
   <p class="hero-copy">An evening of love, laughter, beautiful memories, and unforgettable moments.</p>
   <div class="event-meta">
    <div class="meta-item"><strong>DATE & TIME</strong><span>Sunday, 06 December 2026<br>6:00 PM – 10:00 PM</span></div>
    <div class="meta-item"><strong>VENUE</strong><span>Villa Anaya Resort and Event Place<br>Mangatarem, Pangasinan</span></div>
   </div>
-  <a class="pill" href="#program">EXPLORE THE INVITATION</a>
+  <a class="pill" href="#dresscode">EXPLORE THE INVITATION</a>
   <div class="countdown" aria-label="Countdown to the celebration">
    <div class="timebox"><b id="days">—</b><small>DAYS</small></div>
    <div class="timebox"><b id="hours">—</b><small>HOURS</small></div>
@@ -127,122 +144,237 @@ footer .script{font-size:3rem}
 </header>
 
 <main>
-<section class="section" id="program"><div class="wrap section-inner fade">
- <div class="section-head"><div class="eyebrow">The celebration</div><h2>Celebrant's Program</h2><div class="script">A day to remember</div></div>
- <div class="program-grid">
-  <article class="program-part"><h3>PART I – THE ARRIVAL & GRAND WELCOME</h3><ul>
-   <li><strong>6:00 PM</strong> – Guest Arrival & Mingling</li><li><strong>6:20 PM</strong> – Welcome Remarks by the MC</li><li><strong>6:25 PM</strong> – Grand Entrance</li><li><strong>6:30 PM</strong> – Prayer & Welcome Toast</li>
-  </ul></article>
-  <article class="program-part"><h3>PART II – THE FEAST</h3><ul>
-   <li>Little Games</li><li><strong>6:35 PM</strong> – Dinner</li><li>While Dinner</li><li>Photo Op and Simple Games</li>
-  </ul></article>
-  <article class="program-part"><h3>PART III – TRIBUTES, GAMES & SPECIAL DANCE</h3><ul>
-   <li>18 Wishes</li><li>18 Roses</li><li>Special Dance (Grand Children)</li><li>Games</li>
-  </ul></article>
-  <article class="program-part"><h3>PART IV – THE FINAL & SENDING OF LOVE</h3><ul>
-   <li>Cake Cutting & Candle Blowing</li><li>Celebrant Speech</li>
-  </ul></article>
+
+<!-- DRESS CODE SECTION -->
+<section class="section" id="dresscode">
+ <div class="wrap section-inner fade">
+  <div class="section-head">
+   <div class="eyebrow">A little style inspiration</div>
+   <h2>Dress Code</h2>
+   <div class="script">Semi-Formal Attire</div>
+   <p class="lead">Pastel Color Theme</p>
+  </div>
+
+  <p class="lead">We invite our lovely guests to wear semi-formal outfits in any pastel shade of their choice.</p>
+
+  <div class="pastel-colors">
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#F8C8DC"></div>Pastel Pink</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#E6CFEA"></div>Lavender</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#C8E0F4"></div>Baby Blue</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#CDEAD7"></div>Mint Green</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#DCE8C4"></div>Sage Green</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#FFF0B8"></div>Butter Yellow</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#FFD9C8"></div>Peach</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#F5D5D5"></div>Blush</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#D8D0F0"></div>Lilac</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#BFE5E5"></div>Aqua</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#F4D6B8"></div>Champagne</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#E8DCCB"></div>Beige</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#E8BFCB"></div>Dusty Rose</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#D6D0C5"></div>Pastel Gray</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#E8E8FA"></div>Periwinkle</div>
+   <div class="pastel-color"><div class="pastel-swatch" style="background:#F5E1E5"></div>Powder Pink</div>
+  </div>
+
+  <p class="lead">All pastel shades are welcome! Choose the shade you love and celebrate with us in style. ♡</p>
  </div>
-</div></section>
+</section>
 
-<section class="section" id="roses"><div class="wrap section-inner fade">
- <div class="section-head"><div class="eyebrow">With love and gratitude</div><h2>18 Roses</h2><div class="script">A rose for every memory</div></div>
- <div class="names-grid"><div class="name-column"><ol class="name-list" id="roseList"></ol></div><div class="name-column"><p class="lead">Eighteen roses, eighteen meaningful moments, and the people who make life bloom.</p><div style="text-align:center;color:#c95b68;font-size:3rem;margin-top:25px">❀</div></div></div>
-</div></section>
-
-<section class="section" id="candles"><div class="wrap section-inner fade">
- <div class="section-head"><div class="eyebrow">A light, a wish, a blessing</div><h2>18 Candles & Wishes</h2><div class="script">May every wish shine bright</div></div>
- <div class="names-grid"><div class="name-column"><p class="lead">Eighteen lights sharing warmth, wisdom, and wishes for the years ahead.</p><div style="text-align:center;color:#c95b68;font-size:3rem;margin-top:25px">✧</div></div><div class="name-column"><ol class="name-list" id="candleList"></ol></div></div>
-</div></section>
-
-<section class="section" id="venue"><div class="wrap section-inner venue-card fade">
- <div class="section-head"><div class="eyebrow">We saved you a place</div><h2>Find Your Way</h2><div class="script">Meet us at the celebration</div></div>
- <div class="venue-name">Villa Anaya Resort and Event Place</div><p class="lead">Mangatarem, Pangasinan, Philippines</p>
- <iframe class="map-frame" title="Map to Villa Anaya Resort and Event Place in Mangatarem, Pangasinan" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Villa%20Anaya%20Resort%20and%20Event%20Place%2C%20Mangatarem%2C%20Pangasinan&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
- <div class="map-actions"><a class="pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Villa+Anaya+Resort+and+Event+Place%2C+Mangatarem%2C+Pangasinan">GET DIRECTIONS ↗</a></div>
- <p class="form-note">Please confirm the exact pin in Google Maps before sharing the invitation with guests.</p>
-</div></section>
-
-<section class="section" id="rsvp"><div class="wrap section-inner fade">
- <div class="section-head"><div class="eyebrow">Kindly respond</div><h2>Will You Be There?</h2><div class="script">Your presence is our present</div></div>
- <p class="lead">Your presence will make this celebration even more special. We can't wait to celebrate with you!</p>
- <div class="rsvp-form" style="max-width:760px;margin:auto;text-align:center">
-  <p class="lead">Please complete the form below. Your response will be recorded in Carlita's RSVP spreadsheet.</p>
-  <iframe title="Carlita's 18th Birthday RSVP Form" src="https://docs.google.com/forms/d/e/1FAIpQLSeH-nn4lS0w5M6Z4ZQbs0sjASeY3cxA1AitxlfHGtKTNYBUXA/viewform?embedded=true" width="100%" height="1050" frameborder="0" marginheight="0" marginwidth="0" style="background:#fff;border:1px solid rgba(201,91,104,.25);border-radius:8px">Loading…</iframe>
-  <p class="form-note">If the form does not appear, <a href="https://forms.gle/cUEKuqstZWzmrnfn9" target="_blank" rel="noopener">open the RSVP form here</a>.</p>
+<!-- CELEBRANT'S PROGRAM -->
+<section class="section" id="program">
+ <div class="wrap section-inner fade">
+  <div class="section-head">
+   <div class="eyebrow">The celebration</div>
+   <h2>Celebrant's Program</h2>
+   <div class="script">A day to remember</div>
+  </div>
+  <div class="program-grid">
+   <article class="program-part"><h3>PART I – THE ARRIVAL & GRAND WELCOME</h3><ul>
+    <li><strong>6:00 PM</strong> – Guest Arrival & Mingling</li>
+    <li><strong>6:20 PM</strong> – Welcome Remarks by the MC</li>
+    <li><strong>6:25 PM</strong> – Grand Entrance</li>
+    <li><strong>6:30 PM</strong> – Prayer & Welcome Toast</li>
+   </ul></article>
+   <article class="program-part"><h3>PART II – THE FEAST</h3><ul>
+    <li>Little Games</li>
+    <li><strong>6:35 PM</strong> – Dinner</li>
+    <li>While Dinner</li>
+    <li>Photo Op and Simple Games</li>
+   </ul></article>
+   <article class="program-part"><h3>PART III – TRIBUTES, GAMES & SPECIAL DANCE</h3><ul>
+    <li>18 Wishes</li>
+    <li>18 Roses</li>
+    <li>Special Dance (Grand Children)</li>
+    <li>Games</li>
+   </ul></article>
+   <article class="program-part"><h3>PART IV – THE FINAL & SENDING OF LOVE</h3><ul>
+    <li>Cake Cutting & Candle Blowing</li>
+    <li>Celebrant Speech</li>
+   </ul></article>
+  </div>
  </div>
-</div></section>
+</section>
+
+<!-- 18 ROSES -->
+<section class="section" id="roses">
+ <div class="wrap section-inner fade">
+  <div class="section-head">
+   <div class="eyebrow">With love and gratitude</div>
+   <h2>18 Roses</h2>
+   <div class="script">A rose for every memory</div>
+  </div>
+  <div class="names-grid">
+   <div class="name-column"><ol class="name-list" id="roseList"></ol></div>
+   <div class="name-column">
+    <p class="lead">Eighteen roses, eighteen meaningful moments, and the people who make life bloom.</p>
+    <div style="text-align:center;color:#c95b68;font-size:3rem;margin-top:25px">❀</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 18 CANDLES -->
+<section class="section" id="candles">
+ <div class="wrap section-inner fade">
+  <div class="section-head">
+   <div class="eyebrow">A light, a wish, a blessing</div>
+   <h2>18 Candles & Wishes</h2>
+   <div class="script">May every wish shine bright</div>
+  </div>
+  <div class="names-grid">
+   <div class="name-column">
+    <p class="lead">Eighteen lights sharing warmth, wisdom, and wishes for the years ahead.</p>
+    <div style="text-align:center;color:#c95b68;font-size:3rem;margin-top:25px">✧</div>
+   </div>
+   <div class="name-column"><ol class="name-list" id="candleList"></ol></div>
+  </div>
+ </div>
+</section>
+
+<!-- VENUE -->
+<section class="section" id="venue">
+ <div class="wrap section-inner venue-card fade">
+  <div class="section-head">
+   <div class="eyebrow">We saved you a place</div>
+   <h2>Find Your Way</h2>
+   <div class="script">Meet us at the celebration</div>
+  </div>
+  <div class="venue-name">Villa Anaya Resort and Event Place</div>
+  <p class="lead">Mangatarem, Pangasinan, Philippines</p>
+  <iframe class="map-frame" title="Map to Villa Anaya Resort and Event Place in Mangatarem, Pangasinan" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Villa%20Anaya%20Resort%20and%20Event%20Place%2C%20Mangatarem%2C%20Pangasinan&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+  <div class="map-actions">
+   <a class="pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Villa+Anaya+Resort+and+Event+Place%2C+Mangatarem%2C+Pangasinan">GET DIRECTIONS ↗</a>
+  </div>
+  <p class="form-note">Please confirm the exact pin in Google Maps before sharing the invitation with guests.</p>
+ </div>
+</section>
+
+<!-- RSVP -->
+<section class="section" id="rsvp">
+ <div class="wrap section-inner fade">
+  <div class="section-head">
+   <div class="eyebrow">Kindly respond</div>
+   <h2>Will You Be There?</h2>
+   <div class="script">Your presence is our present</div>
+  </div>
+  <p class="lead">Your presence will make this celebration even more special. We can't wait to celebrate with you!</p>
+  <div class="rsvp-form" style="max-width:760px;margin:auto;text-align:center">
+   <p class="lead">Please complete the form below. Your response will be recorded in Carlita's RSVP spreadsheet.</p>
+   <iframe title="Carlita's Birthday RSVP Form" src="https://docs.google.com/forms/d/e/1FAIpQLSeH-nn4lS0w5M6Z4ZQbs0sjASeY3cxA1AitxlfHGtKTNYBUXA/viewform?embedded=true" width="100%" height="1050" frameborder="0" marginheight="0" marginwidth="0" style="background:#fff;border:1px solid rgba(201,91,104,.25);border-radius:8px">Loading…</iframe>
+   <p class="form-note">If the form does not appear, <a href="https://forms.gle/cUEKuqstZWzmrnfn9" target="_blank" rel="noopener">open the RSVP form here</a>.</p>
+  </div>
+ </div>
+</section>
+
 </main>
 
 <footer>
- <div class="bow">୨୧</div><div class="eyebrow">With love</div>
+ <div class="bow">୨୧</div>
+ <div class="eyebrow">With love</div>
  <h2>CARLITA B. ESTABILLO</h2>
  <div class="script">See you there ♡</div>
  <div class="footline"></div>
  <p class="eyebrow">06 December 2026 · 6:00 PM</p>
- <p style="font:italic 1.1rem 'Cormorant Garamond',serif;color:#765e60">A beautiful beginning to a new chapter.</p>
+ <p style="font:italic 1.1rem 'Cormorant Garamond',serif;color:#765e60">A beautiful day filled with love and memories.</p>
 </footer>
 
 <script>
 const roses = [
 "Jaime M. Benitez Sr.","Arturo M. Benitez","Juan M. Benitez","Felix B. Estabillo","Ferndinand Benitez","Romulo Casiano","Zion Tianford Estabillo","Ivan Drix A. Estabillo","Franz Jaylon G. Estabillo","Jagred Inuj E. Fajardo","Juniber P. Fajardo","Alvin B. Estabillo","Mark B. Estabillo","Christian B. Estabillo","Ian B. Estabillo","Michael B. Estabillo","Francisco B. Estabillo","Maximo B. Estabillo"
 ];
+
 const candles = [
 "Citadel L. Hart","Ofelia B. Estabillo","Helconida E. Robles","Erlinda E. Aben","Maria B. Estabillo","Vilma M. Benitez","Tita M. Benitez","Remedios B. DeVera","Gemma B. Nagal","Lita B. Santos","Irish Dianne A. Estabillo","Frances Joyce G. Estabillo","Marianne Inuj E. Fajardo","Shiela Mhae P. Ancheta","Daisy B. Estabillo","Antoinette Uy","Josefina G. Estabillo","Marissa E. Fajardo"
 ];
-function fillNames(id, names){document.getElementById(id).innerHTML=names.map((n,i)=>`<li><span class="num">${String(i+1).padStart(2,"0")}.</span>${n}</li>`).join("")}
-fillNames("roseList",roses);fillNames("candleList",candles);
-const target = new Date("2026-12-06T18:00:00+08:00").getTime();
+
+function fillNames(id,names){
+ document.getElementById(id).innerHTML=names.map((n,i)=>`<li><span class="num">${String(i+1).padStart(2,"0")}.</span>${n}</li>`).join("");
+}
+
+fillNames("roseList",roses);
+fillNames("candleList",candles);
+
+const target=new Date("2026-12-06T18:00:00+08:00").getTime();
+
 function tick(){
  const diff=target-Date.now();
- if(diff<=0){["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="00");return}
- const vals={days:Math.floor(diff/86400000),hours:Math.floor(diff%86400000/3600000),minutes:Math.floor(diff%3600000/60000),seconds:Math.floor(diff%60000/1000)};
+ if(diff<=0){
+  ["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="00");
+  return;
+ }
+ const vals={
+  days:Math.floor(diff/86400000),
+  hours:Math.floor(diff%86400000/3600000),
+  minutes:Math.floor(diff%3600000/60000),
+  seconds:Math.floor(diff%60000/1000)
+ };
  Object.entries(vals).forEach(([k,v])=>document.getElementById(k).textContent=String(v).padStart(2,"0"));
 }
-tick();setInterval(tick,1000);
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12});
+
+tick();
+setInterval(tick,1000);
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{
+ if(e.isIntersecting){
+  e.target.classList.add("visible");
+  observer.unobserve(e.target);
+ }
+}),{threshold:.12});
+
 document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
-const menuBtn=document.getElementById("menuBtn"),navLinks=document.getElementById("navLinks");
+
+const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.getElementById("navLinks");
+
 menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
 navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
+
 /* Optional licensed audio: add assets/romantic-instrumental.mp3 to enable playback. */
-const audio=new Audio("assets/romantic-instrumental.mp3");audio.loop=true;audio.volume=.35;
-const musicBtn=document.getElementById("musicBtn");let musicOn=false;
+const audio=new Audio("assets/romantic-instrumental.mp3");
+audio.loop=true;
+audio.volume=.35;
+
+const musicBtn=document.getElementById("musicBtn");
+let musicOn=false;
+
 musicBtn.addEventListener("click",async()=>{
  try{
-  if(!musicOn){await audio.play();musicOn=true;musicBtn.innerHTML='<span class="music-note">♫</span> MUSIC: ON'}
-  else{audio.pause();musicOn=false;musicBtn.innerHTML='<span class="music-note">♫</span> MUSIC: OFF'}
- }catch(err){musicBtn.textContent="ADD MUSIC FILE";alert("To enable music, add a licensed instrumental MP3 named romantic-instrumental.mp3 inside the assets folder.");}
+  if(!musicOn){
+   await audio.play();
+   musicOn=true;
+   musicBtn.innerHTML='<span class="music-note">♫</span> MUSIC: ON';
+  }else{
+   audio.pause();
+   musicOn=false;
+   musicBtn.innerHTML='<span class="music-note">♫</span> MUSIC: OFF';
+  }
+ }catch(err){
+  musicBtn.textContent="ADD MUSIC FILE";
+  alert("To enable music, add a licensed instrumental MP3 named romantic-instrumental.mp3 inside the assets folder.");
+ }
 });
 </script>
- 
-<section class="dress-code" style="text-align:center; padding:40px 20px; margin:35px auto; max-width:850px; background:rgba(255,245,249,.95); border:2px solid #e9b9cc; border-radius:20px; color:#9b617c;">
-  <h2 style="color:#c47a9b; letter-spacing:3px;">DRESS CODE</h2>
-  <h3 style="color:#b66e91;">SEMI-FORMAL ATTIRE</h3>
-  <p><strong>PASTEL COLOR THEME</strong></p>
-  <p>Wear your favorite pastel shade and celebrate with us in style!</p>
-
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap:18px; max-width:700px; margin:25px auto;">
-    <div><div style="background:#F8C8DC;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Pastel Pink</div>
-    <div><div style="background:#E6CFEA;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Lavender</div>
-    <div><div style="background:#C8E0F4;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Baby Blue</div>
-    <div><div style="background:#CDEAD7;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Mint Green</div>
-    <div><div style="background:#DCE8C4;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Sage Green</div>
-    <div><div style="background:#FFF0B8;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Butter Yellow</div>
-    <div><div style="background:#FFD9C8;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Peach</div>
-    <div><div style="background:#F5D5D5;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Blush</div>
-    <div><div style="background:#D8D0F0;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Lilac</div>
-    <div><div style="background:#BFE5E5;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Aqua</div>
-    <div><div style="background:#F4D6B8;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Champagne</div>
-    <div><div style="background:#E8DCCB;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Beige</div>
-    <div><div style="background:#E8BFCB;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Dusty Rose</div>
-    <div><div style="background:#D6D0C5;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Pastel Gray</div>
-    <div><div style="background:#E8E8FA;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Periwinkle</div>
-    <div><div style="background:#F5E1E5;width:65px;height:65px;border-radius:50%;margin:auto;"></div>Powder Pink</div>
-  </div>
-
-  <p style="font-style:italic;">All pastel shades are welcome! We can't wait to celebrate with you! ♡</p>
-</section>
 
 </body>
 </html>
+
